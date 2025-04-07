@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Lab1</title>
+  </head>
+  <body>
+    <header>
+      <h1>Знайомство з HTML5 тегами</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Стаття</a></li>
+          <li><a href="#">Медіа</a></li>
+          <li><a href="#">Дані</a></li>
+        </ul>
+      </nav>
+      <time datetime="2024-03-20">20 березня 2024</time>
+    </header>
+
+    <main>
+      <article>
+        <h2>Приклад статті</h2>
+        <section>
+          <p>
+            Це головний зміст статті. Тут може бути довгий текст з
+            <mark>виділеними</mark> елементами.
+          </p>
+          <bdi>إيان</bdi> - це ім'я арабською мовою, яке відображається справа
+          наліво.
+        </section>
+
+        <figure>
+          <picture>
+            <source media="(min-width: 650px)" srcset="large.jpg" />
+            <source media="(min-width: 465px)" srcset="small.jpg" />
+            <img
+              src="https://img.freepik.com/free-photo/countryside-field-sunny-day-countryside_181624-24010.jpg"
+              alt="Галерея"
+            />
+          </picture>
+          <figcaption>Приклад галереї з підписом</figcaption>
+        </figure>
+      </article>
+
+      <aside>
+        <h3>Додаткова інформація</h3>
+        <p>Цей текст відображається у бічній колонці</p>
+        <meter value="0.6">60%</meter> Прогрес завантаження
+      </aside>
+
+      <section id="media">
+        <h2>Мультимедіа</h2>
+        <audio controls>
+          <source src="audio.ogg" type="audio/ogg" />
+          <source src="audio.mp3" type="audio/mpeg" />
+          Якесь аудіо
+        </audio>
+
+        <video controls width="250">
+          <source
+            src="https://youtu.be/dQw4w9WgXcQ?si=lyHZh1dBa76zObBQ"
+            type="video/mp4"
+          />
+          <track
+            src="subtitles.vtt"
+            kind="subtitles"
+            srclang="uk"
+            label="Українські"
+          />
+          Якесь відео
+        </video>
+      </section>
+
+      <section id="data">
+        <h2>Робота з даними</h2>
+        <details>
+          <summary>Деталі виконання</summary>
+          <p>
+            Прогрес виконання завдання:
+            <progress value="75" max="100">75%</progress>
+          </p>
+        </details>
+
+        <form>
+          <input type="range" id="a" value="50" /> +
+          <input type="number" id="b" value="25" /> =
+          <output name="result" for="a b">75</output>
+        </form>
+
+        <datalist id="browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Edge"></option>
+        </datalist>
+
+        <input list="browsers" placeholder="Оберіть браузер" />
+
+        <template>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </template>
+      </section>
+
+      <canvas width="200" height="100"></canvas>
+
+      <dialog open>Це приклад діалогового вікна</dialog>
+
+      <p>Дужедовгесловозможливимрозривом<wbr />десьередині</p>
+    </main>
+
+    <footer>
+      <p>© <time datetime="2024">2024</time> HTML5 Demo</p>
+    </footer>
+  </body>
+</html>

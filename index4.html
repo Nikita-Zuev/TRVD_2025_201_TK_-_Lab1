@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>форма</title>
+    <style>
+      body {
+        margin: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      form {
+        background-color: #f5f5f5;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        max-width: 500px;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .radio-group,
+      .checkbox-group {
+        margin-bottom: 15px;
+      }
+      .radio-option,
+      .checkbox-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Форма</h1>
+
+    <form>
+      <div>
+        <label>Ім'я:</label>
+        <input type="text" />
+      </div>
+
+      <div>
+        <label>Email:</label>
+        <input type="email" />
+      </div>
+
+      <div>
+        <label>Телефон:</label>
+        <input type="tel" />
+      </div>
+
+      <div>
+        <label>Дата народження:</label>
+        <input type="date" />
+      </div>
+
+      <div>
+        <label>Стать:</label>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input value="male" />
+            <label for="male">Чоловіча</label>
+          </div>
+          <div class="radio-option">
+            <input value="female" />
+            <label>Жіноча</label>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="country">Країна:</label>
+        <select id="country" name="country">
+          <option value="">Виберіть країну</option>
+          <option value="ukraine">Україна</option>
+          <option value="poland">Польща</option>
+          <option value="germany">Німеччина</option>
+          <option value="usa">США</option>
+          <option value="other">Інша</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Інтереси:</label>
+        <div class="checkbox-group">
+          <div class="checkbox-option">
+            <input
+              type="checkbox"
+              id="interest-tech"
+              name="interests"
+              value="tech"
+            />
+            <label for="interest-tech">Технології</label>
+          </div>
+          <div class="checkbox-option">
+            <input
+              type="checkbox"
+              id="interest-sport"
+              name="interests"
+              value="sport"
+            />
+            <label for="interest-sport">Спорт</label>
+          </div>
+          <div class="checkbox-option">
+            <input
+              type="checkbox"
+              id="interest-music"
+              name="interests"
+              value="music"
+            />
+            <label for="interest-music">Музика</label>
+          </div>
+          <div class="checkbox-option">
+            <input
+              type="checkbox"
+              id="interest-art"
+              name="interests"
+              value="art"
+            />
+            <label for="interest-art">Мистецтво</label>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="message">Повідомлення:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+      </div>
+
+      <div>
+        <label for="file">Завантажити файл:</label>
+        <input type="file" id="file" name="file" />
+      </div>
+
+      <div>
+        <input type="checkbox" id="agree" name="agree" required />
+        <label for="agree">Я погоджуюсь з умовами використання</label>
+      </div>
+
+      <button type="submit">Відправити</button>
+    </form>
+  </body>
+</html>
